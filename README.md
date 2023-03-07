@@ -11,8 +11,11 @@
 
 Подготовка системы 
 ``sudo apt-get update``
+
 ``sudo apt-get upgrade -y``
+
 ``sudo apt-get install docker.io -y```
+
 ``sudo apt-get install git``
 
 #Редакторы для удобности
@@ -86,6 +89,7 @@ http://ВАЩIPадресс/hls/test.m3u8
 Выполните команду
 
 ``docker ps`` 
+
 ``docker cp idconteinter:/tmp/videos/ /root/video``
 
 Чтобы узнать путь на своей хост машине выполните 
@@ -93,7 +97,9 @@ http://ВАЩIPадресс/hls/test.m3u8
 
 #Перезапуск контейнера или остановка или удаление его
 ``docker restart idconteiner`` - перезапустить
+
 ``docker stop idconteiner`` - остановить
+
 ``docker rm idconteiner`` - остановить
 
 
