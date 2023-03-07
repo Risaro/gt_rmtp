@@ -14,7 +14,7 @@
 
 ``sudo apt-get upgrade -y``
 
-``sudo apt-get install docker.io -y```
+``sudo apt-get install docker.io -y``
 
 ``sudo apt-get install git``
 
