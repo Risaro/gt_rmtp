@@ -18,6 +18,9 @@
 
 ``sudo apt-get install git``
 
+``git clone https://github.com/Risaro/gt_rmtp``
+
+``cd gt_rmtp``
 #Редакторы для удобности
 
 ```sudo apt-get install nano -y```
