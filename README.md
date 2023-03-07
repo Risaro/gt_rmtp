@@ -12,8 +12,7 @@
 Подготовка системы 
 ``sudo apt-get update``
 ``sudo apt-get upgrade -y``
-``sudo apt-get install docker.io -y``
-``sudo apt-get install docker-composer -y``
+``sudo apt-get install docker.io -y```
 ``sudo apt-get install git``
 
 #Редакторы для удобности
