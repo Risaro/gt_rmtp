@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <script   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="   crossorigin="anonymous"></script>
+  <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
+</head>
+<body>
+  <video id="player" class="video-js vjs-default-skin" controls
+	 preload="auto" width="640" height="480" data-setup='{}'>
+
+    <!--
+    <source src="http://0.0.0.0/hls/#{key}.m3u8" type='application/x-mpegURL'>
+    -->
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser
+      that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+  <script>
+  (function () {
+    var DEFAULT_KEY = "test";
+    var $player = $('#player');
+
+    var key = getHashKey() || DEFAULT_KEY;
+    appendVideoSourceByKey(key);
+
+    function appendVideoSourceByKey(key) {
+      if (key != DEFAULT_KEY) {
+        location.hash = key;
+      }
+      $player.find('source').remove();
+      var url = location.origin + "/hls/" + key + ".m3u8";
+      $player.append(
+        "<source src='" + url + "' type='application/x-mpegURL'>"
+      );
+      if (console && typeof console.log == 'function') {
+        console.log("source appended. url: " + url);
+      }
+    }
+    function getHashKey() {
+      return (location.hash || "#").replace("#", "");
+    }
+  })();
+  </script>
+ 
+
+  <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+</body>
+</html>
